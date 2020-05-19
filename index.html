@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="includes/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Ariel Lunenfeld</title>
+    </head>
+    <body>
+
+        <header>
+            <div>
+                <h1><b>DogVille</b></h1>
+                <h2>Hotel & Spa</h2>
+                <strong id="dogLength">15</strong> <span id="dogLengthUnit">in.</span>
+            </div>
+            <form>
+                <label id="in"><input type="radio" name="units" value="in" checked> in.</label>
+                <label id="cm"><input type="radio" name="units" value="cm"> cm</label>
+            </form>
+        </header>
+        <main>
+            <div class="shadow"></div>
+            <div class="dog">
+                <div class="dog-head">
+                    <div class="right-ear">
+                        <div class="ear-lobe"></div>
+                    </div>
+                    <div class="right-eye">
+                        <div class="eye-lid-top"></div>
+                        <div class="eye-lid-bottom"></div>
+                    </div>
+                    <div class="mouth">
+                        <div class="nose"></div>
+                        <div class="freckles"></div>
+                        <div class="tongue"></div>
+                    </div>
+                </div>
+                <div class="back-right-leg">
+                    <div class="thigh">
+                        <div class="foot"></div>
+                    </div>
+                </div>
+                <div class="back-left-leg">
+                    <div class="thigh">
+                        <div class="foot"></div>
+                    </div>
+                </div>
+                <div class="front-right-leg">
+                    <div class="foot"></div>
+                </div>
+                <div class="front-left-leg">
+                    <div class="foot"></div>
+                </div>
+                <div class="tail">
+                    <div class="tail-segment">
+                        <div class="tail-segment">
+                            <div class="tail-segment">
+                                <div class="tail-segment">
+                                    <div class="tail-segment">
+                                        <div class="tail-segment">
+                                            <div class="tail-segment-end"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <form action="http://html5-book.co.il/teach/forms/get_form2.php"  id="flex-container" name="Form" method="get">
+
+            <div class="form-group" id="name">
+                <label for="exampleFormControlInput1" id="fullName">Dog Name:</label>
+                <input type="text" class="form-control" name="fullName" title="first and last name" id="exampleFormControlInput1" pattern="[a-zA-Z]+[ ][a-zA-Z]+" required>
+              </div>
+
+            <div class="form-group" id="e-mail">
+                <label for="exampleFormControlInput1">E-mail For Zoom Invitation:</label>
+                <input type="email" class="form-control" name="male" id="exampleFormControlInput1">
+              </div>
+
+
+            <div class="form-group" id="code">
+                <label for="exampleInputPassword1">GPS Pin Code:</label>
+                <input type="password" class="form-control" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="exampleInputPassword1" required>
+              </div>
+
+
+
+            <div class="form-group" id="insta">
+                <label for="instegram">Dog's Instagram:</label>
+                <input type="url" name="website" id="instegram" class="form-control">
+            </div>
+
+            <div class="form-group" id="num">
+                <label for="phone">Partners Phone Number:</label>
+                <input type="tel" name="phone" id="phone" class="form-control" pattern="05?[0-9]-?[0-9]{7}">
+            </div>
+
+            <div class="form-group" id="snacks">
+                <label for="numbers">Number Of 5 O'Clock Snacks:</label>
+                <input type="number" name="coffee" id="numbers" class="form-control">
+            </div>
+
+            <div class="form-group" id="fitness">
+                <label for="fit">Fitness Level:</label>
+                <input type="range" name="temper" id="fit" class="form-control">
+            </div>
+
+            <div class="form-group" id="vibe">
+                <label for="vibes">Dog Vibe:</label>
+                <textarea name="address" rows="2" cols="30" class="form-control" id="vibes" placeholder="funny, barking at night, tired..."></textarea>
+            </div>
+
+            <div id="haircut">
+               <div class="form-check" class="haircuts">
+                <span>Haircut:</span>
+                <br>
+                <input class="form-check-input" type="checkbox" id="defaultCheck1" name="interests[]" value="Reading-Books">
+                <label class="form-check-label" for="defaultCheck1">
+                    Boho Style(curley hair)
+                </label>
+              </div>
+
+
+              <div class="form-check" class="haircuts">
+                <input class="form-check-input" type="checkbox" value="children" name="interests[]" id="defaultCheck2">
+                <label class="form-check-label" for="defaultCheck2">
+                    Wet look
+                </label>
+              </div>
+
+              <div class="form-check" class="haircuts">
+                <input class="form-check-input" type="checkbox" value="Sleeping" id="defaultCheck2" name="interests[]">
+                <label class="form-check-label" for="defaultCheck2">
+                    Lion Style
+                </label>
+              </div>
+
+              <div class="form-check" class="haircuts">
+                <input class="form-check-input" type="checkbox" value="Studying" id="defaultCheck3" name="interests[]">
+                <label class="form-check-label" for="defaultCheck3">
+                    Vintage(Afro, Braids with beads)
+                </label>
+              </div>
+              <br>
+              <div class="form-check" class="haircuts">
+                <input class="form-check-input" type="checkbox" value="Cleaning" id="defaultCheck4" name="interests[]">
+                <label class="form-check-label" for="defaultCheck4">
+                    Mohawk Hairstyle
+                </label>
+              </div>
+            </div>
+            
+            <div id="rooms">
+              <div class="form-check" id="room">
+                <span>Type Of Room:</span>
+                <br>
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male">
+                <label class="form-check-label" for="exampleRadios1" checked>
+                    Sea View
+                </label>
+              </div>
+
+              <div class="form-check" id="view">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="female">
+                <label class="form-check-label" for="exampleRadios2">
+                    Shrub View(extra charge per night)
+                </label>
+              </div>
+            </div>
+
+
+
+            <div class="form-group" id="music">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Musical Preference:</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="age">
+                  <option selected>Choose...</option>
+                  <option value="10">Mozart</option>
+                  <option value="11">50 Cent</option>
+                  <option value="12">Static and Ben-Al</option>
+                  <option value="13">Noa Kirel</option>
+                  <option value="14">J Balvin</option>
+                  <option value="15">Guns N' Roses</option>
+                  <option value="16">Omer Adam</option>
+                  <option value="17">Ishay Ribo</option>
+                  <option value="18">Ed Sheeran</option>
+                  <option value="19">Idan Haviv</option>
+                  <option value="20">Tiësto</option>
+
+                </select>
+              </div>
+
+            <button  id="submit" type="submit" id="submit-button" onclick="return checkBoxValid();"   value="send" class="btn btn-primary">Submit</button>
+
+        </form>
+
+
+        <footer>
+            <button id="goLeft" disabled>
+                <span class="pipe"></span><span class="arrow-left"></span><span class="arrow-left"></span><span class="sr-text">Go farthest left</span>
+            </button>
+            <button id="goRight" disabled>
+                <span class="arrow-right"></span><span class="arrow-right"></span><span class="sr-text">Go farthest right</span><span class="pipe"></span>
+            </button>
+        </footer>
+
+
+    </body>
+</html> 

@@ -1,0 +1,570 @@
+*{margin: 0;
+	padding: 0;}
+	
+
+	#flex-container{
+		display: flex;
+		top:60px;
+		height: 100px;
+		position: relative;
+		left: 150px;
+		margin-top: 17px;
+	
+	}
+	
+	#fullname,#name{
+		display: none;
+	}
+	
+	.form-group{
+		margin-right: 100px;
+		width: 500px;
+		font-family: 'Balsamiq Sans', cursive;
+		margin-top: 30px;
+		display: none;
+	}
+
+	.form-check{
+		font-family: 'Balsamiq Sans', cursive;
+	}
+
+	.form-check > span{
+		position: relative;
+	}
+
+	#haircut{
+		display: none;
+	}
+
+
+	.inlineRadio1#form-check-input{
+		margin-left: 20px;
+	}
+
+	.form-check{
+		margin-top: auto;
+	}
+
+	
+	#vibes::placeholder{
+		font-size: 11px;
+		margin-top: 15px;
+	}
+	
+	h1{
+		left:50%;
+		position: fixed;
+		font-size: 33px;
+	}
+	
+	h2{
+		left:51%;
+		position: fixed;
+		top: 58px;
+		font-size: 20px;
+	}
+
+
+
+	#submit{
+		display: none;
+		margin-top: 150px;
+		height: 40px;
+		width: 76px;
+		text-align: center;
+	}
+
+
+	#haircut{
+		display: none;
+	}
+
+	#rooms{
+		display: none;
+	}
+
+	.form-check-label{
+		margin-top: 3px;
+	}
+	
+	
+	
+	*, *:before, *:after {
+		border: 0;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--dur: 0.7s;
+		--dogWidth: 15em;
+		--dogUpAngle: -30deg;
+		--dogBounceDown: 2deg;
+		--dogBounceUp: -1deg;
+		/* dog colors */
+		--w: #fff;
+		--lgy: #404040;
+		--gy: #373737;
+		--dgy: #303030;
+		--bk: #171717;
+		--bn: #e08c66;
+		--bnT: #e08c6600;
+		--dbn: #c06a44;
+		--dbnT: #c06a4400;
+		--pk: #ff7f7f;
+		--hpk: #cc5f5f;
+	}
+	body, header, footer {
+		display: flex;
+	}
+	body {
+		background-image:
+			linear-gradient(
+				#acc calc(50% - 2em),
+				#fff calc(50% - 2em),
+				#fff calc(50% - 1.5em),
+				#eee calc(50% - 1.5em),
+				#eee calc(50% - 1em),
+				#fff calc(50% - 1em),
+				#fff calc(50% - 0.6em),
+				#eee calc(50% - 0.6em),
+				#eee calc(50% + 2em),
+				#575 calc(50% + 2em),
+				#575 calc(50% + 2.25em),
+				#686 calc(50% + 2.25em)
+			);
+		font: 16px Hind, sans-serif;
+		height: 100vh;
+		line-height: 1.5;
+		overflow-y: hidden;
+	}
+	/* UI */
+	header, footer {
+		justify-content: space-between;
+		position: fixed;
+		left: 0;
+		padding: 0.75em;
+		width: 100%;
+		z-index: 9;
+	}
+	header {
+		top: 0;
+		line-height: 1;
+		text-align: center;
+	}
+	header strong {
+		font-size: 3em;
+	}
+	footer {
+		bottom: 0;
+	}
+	label {
+		margin-right: 0.75em;
+	}
+	button {
+		background: #ff0;
+		border-radius: 0.5em;
+		color: #171717;
+		padding: 0.75em;
+		width: 4.5em;
+		height: 4.5em;
+		transition: filter 0.25s linear, -webkit-filter 0.25s linear;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+	button:disabled {
+		opacity: 0.3;
+	}
+	button:not(:disabled) {
+		cursor: pointer;
+	}
+	button:not(:disabled):hover {
+		filter: brightness(2);
+		-webkit-filter: brightness(2);
+	}
+	button:not(:disabled):active {
+		filter: brightness(0.8);
+		-webkit-filter: brightness(0.8);
+	}
+	button span {
+		border: 0;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		vertical-align: middle;
+	}
+	.arrow-left, .arrow-right {
+		border-top: 1.25em solid transparent;
+		border-bottom: 1.25em solid transparent; 
+	}
+	.arrow-left {
+		border-right: 1.25em solid; 
+	}
+	.arrow-right {
+		border-left: 1.25em solid; 
+	}
+	.pipe {
+		background: currentColor;
+		width: 0.25em;
+		height: 2.25em;
+	}
+	.sr-text {
+		overflow: hidden;
+	}
+	/* Dog */
+	main {
+		display: block;
+		margin: auto;
+		position: relative;
+		width: 27.5em;
+		height: 15em;
+	}
+	main div {
+		position: absolute;
+		transform-style: preserve-3d;
+	}
+	.dog, .dog-head, .tail, .tail div {
+		background: var(--gy);
+	}
+	.shadow, .dog {
+		transition: width var(--dur) linear;
+		left: 7em;
+		width: var(--dogWidth);
+	}
+	.shadow {
+		background: #0004;
+		border-radius: 2.5em / 0.5em;
+		top: 14.5em;
+		height: 1em;
+	}
+	.dog {
+		border-radius: 2.5em 0 5em 2.5em;
+		box-shadow: 0 -0.5em 0 var(--dgy) inset;
+		cursor: pointer;
+		top: 7em;
+		transform-origin: 2.5em 2.5em;
+		height: 5em;
+		z-index: 0;
+	}
+	.dog-head, .dog-head:before {
+		border-radius: 3em 5em 50% 50% / 50% 3em 50% 50%;
+	}
+	.dog-head {
+		background-image: radial-gradient(5em 3em at 25% 75%,var(--bn) 49%,var(--bnT) 50%);
+		box-shadow: 0.35em -2.5em 0 var(--bn) inset;
+		bottom: 4em;
+		right: -2em;
+		width: 8em;
+		height: 8em;
+		z-index: 1;
+	}
+	.dog-head:before {
+		background-image: radial-gradient(110% 100% at 50% 45%,var(--dbnT) 49%,var(--dbn) 50%);
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.right-ear, .ear-lobe {
+		background: var(--lgy);
+	}
+	.right-ear {
+		border-radius: 3em 0.5em 1em 0 / 1em 0.5em 3em 0;
+		top: 1em;
+		left: -1.5em;
+		width: 4em;
+		height: 3em;
+		transform: rotate(-20deg);
+		z-index: 2;
+	}
+	.ear-lobe {
+		border-radius: 1.5em 1em 2em 2em / 3em 1em 2em 5em;
+		box-shadow: 0.25em -0.5em 0 var(--dgy) inset;
+		top: 0.5em;
+		left: -0.8em;
+		transform: rotate(15deg);
+		transform-origin: 2em 1em;
+		width: 4em;
+		height: 8em;
+	}
+	.right-eye {
+		background: var(--w);
+		border-radius: 50%;
+		box-shadow:
+			0.25em 0 0 0.125em var(--w) inset,
+			0 -0.2em 0 0.6em var(--bk) inset;
+		top: 2.25em;
+		left: 5em;
+		width: 1.75em;
+		height: 1.75em;
+	}
+	.right-eye div {
+		background: var(--gy);
+		animation: blinkEye 4s linear infinite;
+		width: 100%;
+		height: 50%;
+		transform: scaleY(0);
+	}
+	.eye-lid-top {
+		transform-origin: 50% 0;
+	}
+	.eye-lid-bottom {
+		top: 50%;
+		transform-origin: 50% 100%;
+	}
+	.mouth {
+		background: var(--bn);
+		border-radius: 0 1.5em 50% 0 / 0 1.5em 2.5em 0;
+		box-shadow:
+			0 1em 0 var(--gy) inset,
+			0 -0.25em 0 var(--dbn) inset;
+		top: 3.1em;
+		left: 7.4em;
+		transform: rotate(14deg);
+		width: 3.75em;
+		height: 4.1em;
+		z-index: 1;
+	}
+	.nose {
+		background: var(--bk);
+		border-radius: 0.5em 0.5em 50% 50%;
+		top: 0em;
+		left: 2.2em;
+		width: 1.5em;
+		height: 2.2em;
+		transform: rotate(-45deg);
+	}
+	.freckles {
+		background: currentColor;
+		border-radius: 50%;
+		box-shadow:
+			-0.6em -0.3em 0,
+			0 -0.7em 0,
+			-0.4em 0.5em 0,
+			0.6em -0.3em 0,
+			0.4em 0.5em 0;
+		color: var(--dbn);
+		top: 2.6em;
+		left: 2em;
+		transform: rotate(-10deg);
+		width: 0.4em;
+		height: 0.4em;
+	}
+	.tongue {
+		animation: tongueStickOut 4s linear infinite;
+		background: var(--pk);
+		border-radius: 0 50% 50% 0;
+		box-shadow: 0 -0.25em 0 var(--hpk) inset;
+		top: 2.4em;
+		left: 0.4em;
+		width: 2.5em;
+		height: 1.5em;
+		transform: translateZ(-1px);
+		z-index: -1;
+	}
+	.back-right-leg, .back-left-leg {
+		box-shadow: 0 -0.5em 0 var(--dgy) inset;
+		border-radius: 50%;
+		width: 5em;
+		height: 5em;
+	}
+	.thigh {
+		left: 0.5em;
+	}
+	.front-right-leg, .front-left-leg, .thigh {
+		border-radius: 1.5em 1.5em 1em 1em / 1.5em 1.5em 4em 4em;
+		top: 1.5em;
+		width: 3em;
+		height: 5.5em;
+	}
+	.back-right-leg, .back-right-leg .thigh, .front-right-leg, .front-right-leg .thigh {
+		background: var(--lgy);
+	}
+	.back-left-leg, .back-left-leg .thigh, .front-left-leg {
+		background: var(--dgy);
+	}
+	.back-left-leg, .front-left-leg {
+		transform: translateZ(-1px);
+		z-index: -1;
+	}
+	.back-right-leg {
+		left: 0;
+	}
+	.back-left-leg {
+		left: 1em;
+	}
+	.front-right-leg, .front-left-leg {
+		box-shadow: -0.25em -0.25em 0 var(--dgy) inset;
+		transform-origin: 1.5em 1.5em;
+	}
+	.front-right-leg {
+		right: 3.5em;
+	}
+	.front-left-leg {
+		right: 2.5em;
+	}
+	.back-right-leg .foot, .front-right-leg .foot {
+		background: var(--bn);
+		box-shadow:
+			0 0.5em 0 var(--bn) inset,
+			-0.3em 0.25em 0 var(--bn) inset,
+			-0.5em 0 0 #0004 inset;
+	}
+	.back-left-leg .foot, .front-left-leg .foot {
+		background: var(--dbn);
+		box-shadow:
+			0 0.5em 0 var(--dbn) inset,
+			-0.3em 0.25em 0 var(--dbn) inset,
+			-0.5em 0 0 #0004 inset;
+	}
+	.foot {
+		border-radius: 0 1em 0.25em 0.25em;
+		top: 5em;
+		left: 0.5em;
+		transform-origin: 0 0;
+		width: 2.5em;
+		height: 1.5em;
+	}
+	.tail, .tail-segment, .tail-segment-end {
+		box-shadow: -0.25em 0.4em 0 var(--dgy) inset;
+		left: 1em;
+		width: 2em;
+		height: 1em;
+	}
+	.tail, .tail-segment {
+		border-radius: 0.5em;
+	}
+	.tail {
+		animation: idleTailWag 6s linear infinite;
+		top: 0.2em;
+		transform: rotate(140deg);
+		transform-origin: 0.5em 0.5em;
+		z-index: -1;
+	}
+	.tail-segment, .tail-segment-end {
+		animation: idleTailSegmentRotate 6s linear infinite;
+	}
+	.tail-segment {
+		transform: rotate(-2deg);
+	}
+	.tail-segment-end {
+		border-radius: 0.5em 1.5em 1.5em 0.5em / 0.5em 0.5em 0.5em 0.5em;
+	}
+	/* Dog growing state */
+	.growing {
+		animation: bodyUpDown var(--dur) linear;
+	}
+	.growing .dog-head {
+		animation: headRotate var(--dur) linear;
+	}
+	.growing .ear-lobe {
+		animation: earRotate var(--dur) linear;
+	}
+	.growing .back-right-leg {
+		animation: backRightLegUpDown var(--dur) linear;
+	}
+	.growing .back-left-leg {
+		animation: backLeftLegUpDown var(--dur) linear;
+	}
+	.growing .front-right-leg {
+		animation: frontRightLegUpDown var(--dur) linear;
+	}
+	.growing .front-left-leg {
+		animation: frontLeftLegUpDown var(--dur) linear;
+	}
+	.growing .back-right-leg .foot, .growing .back-left-leg .foot {
+		animation: backFootUpDown var(--dur) linear;
+	}
+	.growing .front-right-leg .foot, .growing .front-left-leg .foot {
+		animation: frontFootUpDown var(--dur) linear;
+	}
+	.growing .tail {
+		animation: tailWag var(--dur) linear;
+	}
+	.growing .tail-segment, .growing .tail-segment-end {
+		animation: tailSegmentRotate var(--dur) linear;
+	}
+	
+	/** Animations **/
+	/* Constant */
+	@keyframes blinkEye {
+		from, 90%, to {transform: scaleY(0) }
+		95% {transform: scaleY(1) }
+	}
+	@keyframes tongueStickOut {
+		from, 35%, 65%, to { transform: translateZ(-1px) translateX(0) }
+		40%, 50%, 60% { transform: translateZ(-1px) translateX(56%) }
+		45%, 55% { transform: translateZ(-1px) translateX(41%) }
+	}
+	@keyframes idleTailWag {
+		from, 20%, 30%, 45%, 55%, to { transform: rotate(140deg) }
+		25%, 50% { transform: rotate(200deg) }
+	}
+	@keyframes idleTailSegmentRotate {
+		from, 20%, 30%, 45%, 55%, to { transform: rotate(-2deg) }
+		25%, 50% { transform: rotate(8deg) }
+	}
+	/* When growth is triggered */
+	@keyframes bodyUpDown {
+		from, to { transform: translate(0) rotate(0deg) }
+		/* init: -30, 5, -2 */
+		10% { transform: translate(0) rotate(var(--dogBounceDown)) }
+		50% { transform: translate(0.5em,-0.5em) rotate(var(--dogUpAngle)) }
+		80% { transform: translate(0) rotate(var(--dogBounceDown)) }
+		90% { transform: translate(0) rotate(var(--dogBounceUp)) }
+	}
+	@keyframes headRotate {
+		from, to { transform: rotate(0deg) }
+		50% { transform: rotate(-20deg) }
+		80% { transform: rotate(4deg) }
+		90% { transform: rotate(-1deg) }
+	}
+	@keyframes earRotate {
+		from, to { transform: rotate(15deg) }
+		50% { transform: rotate(45deg) }
+		80% { transform: rotate(11deg) }
+		90% { transform: rotate(17deg) }
+	}
+	@keyframes backRightLegUpDown {
+		from, 80%, to { transform: rotate(0deg) }
+		10% { transform: rotate(-4deg) }
+		50% { transform: rotate(30deg) }
+	}
+	@keyframes backLeftLegUpDown {
+		from, 80%, to { transform: translateZ(-1px) rotate(0deg) }
+		10% { transform: translateZ(-1px) rotate(-4deg) }
+		50% { transform: translateZ(-1px) rotate(30deg) }
+	}
+	@keyframes frontRightLegUpDown {
+		from, to { transform: rotate(0deg) }
+		10% { transform: rotate(12deg) }
+		50%, 80% { transform: rotate(-45deg) }
+	}
+	@keyframes frontLeftLegUpDown {
+		from, to { transform: translateZ(-1px) rotate(0deg) }
+		10% { transform: translateZ(-1px) rotate(12deg) }
+		50%, 80% { transform: translateZ(-1px) rotate(-45deg) }
+	}
+	@keyframes backFootUpDown {
+		from, 80%, to { transform: rotate(0deg) }
+		50% { transform: rotate(20deg) }
+	}
+	@keyframes frontFootUpDown {
+		from, 80%, to { transform: rotate(0deg) }
+		10% { transform: rotate(-12deg) }
+		50%, 80% { transform: rotate(-20deg) }
+		90% { transform: rotate(15deg) }
+	}
+	@keyframes tailWag {
+		from, 80%, to { transform: rotate(140deg) }
+		50% { transform: rotate(175deg) }
+	}
+	@keyframes tailSegmentRotate {
+		from, 80%, to { transform: rotate(-2deg) }
+		50% { transform: rotate(4deg) 
+	}
+}
